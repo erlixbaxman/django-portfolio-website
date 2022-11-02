@@ -1,0 +1,62 @@
+<!doctype html>
+{% load static  %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matniyazov Aziz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md bg-light">
+      <div class="container-fluid">
+
+        <a class="btn btn-outline-info" href="{% url 'home' %}">
+          <img src="{% static 'portfolio/sticker.webp' %}" width="30" height="30" class="d-inline-block align-top" >Matniyazov Aziz </a>
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--          <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <a class="btn btn-success " href="{% static 'portfolio/Матниязов Азиз.pdf' %}"> Resume</a>
+                </div>
+                <div class="col">
+                  <a class="btn btn-primary" href="https://vk.com/azish_mr" target="_blank">vk</a>
+                </div>
+                <div class="col">
+                  <a class="btn btn-warning" href="{% url 'blog:all_blogs' %}">Blog</a>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div style = "padding: 50px;">
+  <style>
+         body {
+          background: url(static/portfolio/vectorpic.jpg) no-repeat center center fixed;
+          background-position: center;
+          background-size: cover;
+          background-attachment: scroll;
+         }
+  </style>
+    {% block content  %}
+
+
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    </div>
+  </body>
+
+</html>
+
+
